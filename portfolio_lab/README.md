@@ -1,1 +1,1 @@
-Coders Lab taraning: my Portfolio Lab project
+Coders Lab: my Portfolio Lab project
