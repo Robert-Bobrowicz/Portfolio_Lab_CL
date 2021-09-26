@@ -1,9 +1,17 @@
-function App() {
+import React from "react";
+import {BrowserRouter, Switch, Route} from "react-router-dom";
+import Home from "./components/Home";
+import Test from "./components/Test";
+
+
+const App = () => {
   return (
-    <div className="App">
-      <h1>Hello you!</h1>
-        <p>Test fontów z https://fonts.googleapis.com</p>
-    </div>
+      <BrowserRouter>
+          <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/test" component={Test} />
+          </Switch>
+      </BrowserRouter>
   );
 }
 
