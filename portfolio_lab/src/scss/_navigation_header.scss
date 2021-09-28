@@ -21,6 +21,11 @@ li {
   border: 1.5px solid white;
 }
 
+a {
+  text-decoration: none;
+  color: $color5;
+}
+
 li:hover {
   border-left: 1.5px solid $color5;
   border-top: 1.5px solid $color5;
