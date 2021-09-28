@@ -2,7 +2,7 @@ import React from 'react';
 
 const HomePage = () => {
     return (
-        <div className="home_page" id="home_page">
+        <div className="homePage" id="homePage">
             <img src="../assets/Home-Hero-Image.jpg" alt="Home hero"/>
             <div>
                 <h1>Zacznij pomagać</h1>

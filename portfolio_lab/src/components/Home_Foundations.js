@@ -2,7 +2,7 @@ import React from 'react';
 
 const HomeFoundations = () => {
     return (
-        <div>
+        <div className="foundations" id="foundations">
             <h2>Komu pomagamy</h2>
             <img src="../assets/Decoration.svg" />
             <ul>

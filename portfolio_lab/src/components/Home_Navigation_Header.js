@@ -8,11 +8,11 @@ const HomeNavigationHeader = () => {
                 <li>Załóż konto</li>
             </ul>
             <ul className="nav_menu" id="nav_menu">
-                <li><a href="#home_page">Start</a></li>
-                <li><a href="#">O co chodzi?</a></li>
-                <li><a href="#">O nas</a></li>
-                <li><a href="#">Fundacja i organizacje</a></li>
-                <li><a href="#">Kontakt</a></li>
+                <li><a href="#homePage">Start</a></li>
+                <li><a href="#threeColumns">O co chodzi?</a></li>
+                <li><a href="#aboutUs">O nas</a></li>
+                <li><a href="#foundations">Fundacja i organizacje</a></li>
+                <li><a href="#conatct">Kontakt</a></li>
             </ul>
         </div>
     );

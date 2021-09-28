@@ -2,7 +2,7 @@ import React from 'react';
 
 const HomeThreeColumns = () => {
     return (
-        <div>
+        <div className="threeColumns" id="threeColumns">
             <div className="columnOne">
                 <p>10</p>
             </div>
@@ -12,7 +12,6 @@ const HomeThreeColumns = () => {
             <div className="columnThree">
                 <p>7</p>
             </div>
-
         </div>
     );
 };
