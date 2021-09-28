@@ -1,0 +1,20 @@
+import React from 'react';
+
+const HomeThreeColumns = () => {
+    return (
+        <div>
+            <div className="columnOne">
+                <p>10</p>
+            </div>
+            <div className="columnTwo">
+                <p>5</p>
+            </div>
+            <div className="columnThree">
+                <p>7</p>
+            </div>
+
+        </div>
+    );
+};
+
+export default HomeThreeColumns;
