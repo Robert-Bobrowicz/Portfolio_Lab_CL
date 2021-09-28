@@ -1,0 +1,47 @@
+@import "./settings/colors";
+
+.navigation_header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin-right: 1.6rem;
+  text-align: center;
+  vertical-align: center;
+  padding: 0.65em;
+  border: 1.5px solid white;
+}
+
+li:hover {
+  border-left: 1.5px solid $color5;
+  border-top: 1.5px solid $color5;
+  border-right: 1.5px solid $color4;
+  border-bottom: 1.5px solid $color4;
+}
+
+.login {
+  font-size: 0.6rem;
+  color: $color4;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.login li:hover {
+  border: 1.5px solid $color3;
+}
+
+.nav_menu {
+  font-size: 1rem;
+  color: $color5;
+  margin: 0;
+}
+
