@@ -9,22 +9,15 @@ import HomeContact from "./Home_Contact";
 
 const Home = () => {
     return (
-        <>
-            <div>
-                <HomeNavigationHeader />
-                <HomePage />
-                <HomeThreeColumns />
-                <HomeFourSteps />
-                <HomeAboutUs />
-                <HomeFoundations />
-                <HomeContact />
-            </div>
-            <div>
-                <h1>Hello everyone!</h1>
-                <p>sample text for testing</p>
-            </div>
-        </>
-
+        <div>
+            <HomeNavigationHeader />
+            <HomePage />
+            <HomeThreeColumns />
+            <HomeFourSteps />
+            <HomeAboutUs />
+            <HomeFoundations />
+            <HomeContact />
+        </div>
     );
 };
 
