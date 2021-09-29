@@ -1,9 +1,10 @@
 import React from 'react';
+import people from "../assets/People.jpg";
 
 const HomeAboutUs = () => {
     return (
         <div className="aboutUs" id="aboutUs">
-            <img src="../assets/People.jpg" alt="people"/>
+            <img src={people} alt="people"/>
             <div className="about_us"> O nas </div>
         </div>
     );

@@ -3,7 +3,6 @@ import {Container, Row, Col} from "react-bootstrap";
 
 const Test = () => {
     return (
-
             <Container>
                 <Row>
                     <Col>1 of 4</Col>
@@ -12,7 +11,6 @@ const Test = () => {
                     <Col>1 of 1</Col>
                 </Row>
             </Container>
-
     );
 };
 

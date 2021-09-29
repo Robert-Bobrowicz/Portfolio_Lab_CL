@@ -1,5 +1,7 @@
 import React from 'react';
+import {Link as ScrollLink} from 'react-scroll';
 import homeHeroImage from "../assets/Home-Hero-Image.jpg";
+import decoration from "../assets/Decoration.svg";
 
 const HomeMainSection = () => {
     return (
@@ -8,10 +10,10 @@ const HomeMainSection = () => {
             <div>
                 <h1>Zacznij pomagać</h1>
                 <h1>Oddaj niechciane rzeczy w zaufane ręce</h1>
-                <img src="../assets/Decoration.svg" alt="decoration"/>
+                <img src={decoration} alt="decoration"/>
                 <div>
-                    <a href="#fourSteps">Oddaj rzeczy</a>
-                    <a href="#fourSteps">Zorganizuj zbiórkę</a>
+                    <ScrollLink to="fourSteps">Oddaj rzeczy</ScrollLink>
+                    <ScrollLink to="fourSteps">Zorganizuj zbiórkę</ScrollLink>
                 </div>
             </div>
         </div>

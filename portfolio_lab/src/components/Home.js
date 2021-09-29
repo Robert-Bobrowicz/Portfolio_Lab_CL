@@ -7,18 +7,23 @@ import HomeFourSteps from "./Home_Four_Steps";
 import HomeAboutUs from "./Home_About_Us";
 import HomeFoundations from "./Home_Foundations";
 import HomeContact from "./Home_Contact";
+import {Container, Row, Col} from "react-bootstrap";
 
 const Home = () => {
     return (
-        <div>
-            <HomeNavigationHeader />
-            <HomeMainSection />
-            <HomeThreeColumns />
-            <HomeFourSteps />
-            <HomeAboutUs />
-            <HomeFoundations />
-            <HomeContact />
-        </div>
+        <Container fluid>
+            <Row>
+                <Col>
+                    <HomeNavigationHeader />
+                    <HomeMainSection />
+                    <HomeThreeColumns />
+                    <HomeFourSteps />
+                    <HomeAboutUs />
+                    <HomeFoundations />
+                    <HomeContact />
+                </Col>
+            </Row>
+        </Container>
     );
 };
 
