@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HomeMainPage = () => {
+const HomeMainSection = () => {
     return (
         <div className="homePage" id="homePage">
             <img src="../assets/Home-Hero-Image.jpg" alt="Home hero"/>
@@ -17,4 +17,4 @@ const HomeMainPage = () => {
     );
 };
 
-export default HomeMainPage;
+export default HomeMainSection;
