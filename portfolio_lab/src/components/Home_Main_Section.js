@@ -1,9 +1,10 @@
 import React from 'react';
+import homeHeroImage from "../assets/Home-Hero-Image.jpg";
 
 const HomeMainSection = () => {
     return (
-        <div className="homePage" id="homePage">
-            <img src="../assets/Home-Hero-Image.jpg" alt="Home hero"/>
+        <div className="mainSection" id="mainSection">
+            <img src={homeHeroImage} alt="Home hero"/>
             <div>
                 <h1>Zacznij pomagać</h1>
                 <h1>Oddaj niechciane rzeczy w zaufane ręce</h1>

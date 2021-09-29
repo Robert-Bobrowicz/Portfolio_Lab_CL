@@ -1,5 +1,6 @@
 import React from 'react';
-import {Link} from 'react-scroll';
+import {Link} from 'react-router-dom';
+import {Link as ScrollLink} from 'react-scroll';
 
 const HomeNavigationHeader = () => {
     return (
@@ -9,7 +10,7 @@ const HomeNavigationHeader = () => {
                 <li><Link to="/register">Załóż konto</Link></li>
             </ul>
             <ul className="nav_menu" id="nav_menu">
-                <li><Link to="#mainPage">Start</Link></li>
+                <li><ScrollLink to="mainSection">Start</ScrollLink></li>
                 <li><a href="#threeColumns">O co chodzi?</a></li>
                 <li><a href="#aboutUs">O nas</a></li>
                 <li><a href="#foundations">Fundacja i organizacje</a></li>
