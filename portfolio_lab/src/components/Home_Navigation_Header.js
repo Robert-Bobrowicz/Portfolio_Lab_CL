@@ -1,12 +1,11 @@
 import React from 'react';
 import {Link} from 'react-scroll';
 
-
 const HomeNavigationHeader = () => {
     return (
         <div className="navigation_header" id="navigation_header_ID">
             <ul className="login" id="login">
-                <li><Link to="/log_in">Zaloguj</Link></li>
+                <li><Link to="/login">Zaloguj</Link></li>
                 <li><Link to="/register">Załóż konto</Link></li>
             </ul>
             <ul className="nav_menu" id="nav_menu">
