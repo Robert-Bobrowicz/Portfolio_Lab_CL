@@ -1,10 +1,11 @@
 import React from 'react';
+import {Container} from "react-bootstrap";
 
 const Register = () => {
     return (
-        <div className="register">
+        <Container fluid className="register">
             Zarejestruj się
-        </div>
+        </Container>
     );
 };
 

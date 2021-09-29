@@ -22,7 +22,6 @@ const HomeNavigationHeader = () => {
                 </Col>
             </Row>
         </Container>
-
     );
 };
 
