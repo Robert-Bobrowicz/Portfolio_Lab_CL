@@ -1,0 +1,43 @@
+@import "./settings/colors";
+
+.mainSection {
+  height: 100vh;
+}
+
+.homeHeroImage {
+  width: 150%;
+  height: 90vh;
+  transform: translate(-350px, -100px);
+}
+
+.mainSectionText {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $color5;
+}
+
+.mainSectionText > img {
+  margin-top: 2rem;
+}
+.mainSectionButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.mainSectionButtons button {
+  width: 40%;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  color: $color4;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.mainSectionButtons button:hover {
+  border: 1px solid $color4;
+}
