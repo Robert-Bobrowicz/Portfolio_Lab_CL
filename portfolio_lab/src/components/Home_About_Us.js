@@ -8,14 +8,18 @@ const HomeAboutUs = () => {
     return (
         <Container fluid className="aboutUs" id="aboutUs">
             <Row>
-                <Col>
+                <Col className="aboutUs">
                     <h3>O nas</h3>
                     <img src={decoration} alt="decoration" />
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    <img src={podpis} alt="podpis prezesa" />
+                    <Row className="signature">
+                        <Col>
+                            <img src={podpis} alt="podpis prezesa" />
+                        </Col>
+                    </Row>
                 </Col>
-                <Col>
-                    <img src={people} alt="people"/>
+                <Col className="peopleImage">
+                    <img src={people} alt="people" className="peopleImagePicture" />
                 </Col>
             </Row>
         </Container>

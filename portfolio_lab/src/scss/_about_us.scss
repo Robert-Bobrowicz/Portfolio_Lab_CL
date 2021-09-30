@@ -1,2 +1,34 @@
 @import "./settings/colors";
 
+.aboutUs, .peopleImage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.peopleImagePicture {
+  width: 100%;
+  height: 75vh;
+}
+
+.signature {
+  width: 100%;
+  text-align: right;
+}
+
+.aboutUs {
+  padding: 2rem;
+  margin-right: 2rem;
+}
+
+.aboutUs > h3 {
+  margin-bottom: 1.2rem;
+}
+
+.aboutUs > p {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
