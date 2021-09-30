@@ -1,2 +1,30 @@
 @import "./settings/colors";
 
+.whoWeHelp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.whoWeHelp > img {
+  margin-top: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.whoWeHelp ul {
+  padding-left: 4rem;
+}
+
+.whoWeHelp > ul li {
+  margin-left: 2rem;
+  margin-right: 2rem;
+
+}
+
+.whoWeHelp > p {
+  text-align: center;
+  margin-top: 3rem;
+}
