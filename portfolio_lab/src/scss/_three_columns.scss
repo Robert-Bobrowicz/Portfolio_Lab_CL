@@ -1,0 +1,26 @@
+@import "./settings/colors";
+
+.threeColumns {
+  height: auto;
+  margin-top: -10rem;
+  background-color: $color3;
+}
+
+.column {
+  text-align: center;
+  padding: 1.6rem;
+  color: $color5;
+}
+
+.column p:nth-child(1) {
+  font-size: 4rem;
+}
+
+.column p:nth-child(2) {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.column p:nth-child(3) {
+  font-size: 0.7rem;
+}
