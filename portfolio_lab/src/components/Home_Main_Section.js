@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container, Row, Col} from "react-bootstrap";
-import {Link as ScrollLink} from 'react-scroll';
+import {Link} from 'react-router-dom';
 import homeHeroImage from "../assets/Home-Hero-Image.jpg";
 import decoration from "../assets/Decoration.svg";
 
@@ -20,10 +20,10 @@ const HomeMainSection = () => {
                         <img src={decoration} alt="decoration"/>
                         <div className="mainSectionButtons">
                             <button>
-                                <ScrollLink to="fourSteps">Oddaj rzeczy</ScrollLink>
+                                <Link to="/register">Oddaj rzeczy</Link>
                             </button>
                             <button>
-                                <ScrollLink to="fourSteps">Zorganizuj zbiórkę</ScrollLink>
+                                <Link to="register">Zorganizuj zbiórkę</Link>
                             </button>
                         </div>
                     </div>
