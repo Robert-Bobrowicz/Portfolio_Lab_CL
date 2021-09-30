@@ -16,7 +16,7 @@ const HomeNavigationHeader = () => {
                         <li><ScrollLink to="mainSection">Start</ScrollLink></li>
                         <li><ScrollLink to="threeColumns">O co chodzi?</ScrollLink></li>
                         <li><ScrollLink to="aboutUs">O nas</ScrollLink></li>
-                        <li><ScrollLink to="foundations">Fundacja i organizacje</ScrollLink></li>
+                        <li><ScrollLink to="whoWeHelp">Fundacja i organizacje</ScrollLink></li>
                         <li><ScrollLink to="contact">Kontakt</ScrollLink></li>
                     </ul>
                 </Col>
