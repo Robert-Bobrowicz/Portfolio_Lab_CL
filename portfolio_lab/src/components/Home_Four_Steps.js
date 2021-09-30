@@ -44,9 +44,11 @@ const HomeFourSteps = () => {
                 </Col>
             </Row>
             <Row>
-                <button>
-                    <Link to="/login">Oddaj rzeczy</Link>
-                </button>
+                <Col className="fourSteps_button">
+                    <button>
+                        <Link to="/login">Oddaj rzeczy</Link>
+                    </button>
+                </Col>
             </Row>
         </Container>
     );
