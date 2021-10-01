@@ -20,7 +20,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.3;
+  opacity: 0.2;
   background-image: url("../assets/Background-Contact-Form.jpg");
   background-position: center;
   background-size: cover;
@@ -30,8 +30,51 @@
 
 .contactForm {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .contactBackgroundImage {
   height: 250px;
+}
+
+.contactName_Email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactName {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactEmail {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactTextArea {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.footer > p {
+  width: 100%;
+  text-align: center;
+}
+
+.footer img {
+  transform: translateY(-0.5rem);
+  margin-right: 1.5rem;
 }

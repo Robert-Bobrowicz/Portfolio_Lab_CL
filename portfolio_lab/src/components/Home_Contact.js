@@ -7,40 +7,44 @@ import instagramIcon from "../assets/Instagram.svg";
 
 const HomeContact = () => {
     return (
-        <Container className="contact" id="contact">
-            <Row>
-                <Col className="contactForm">
-                    <h3>Skontaktuj się z nami</h3>
-                    <img src={decoration} alt="decoration" />
-                    <form>
-                        <div>
-                            <div>
-                                <label>Wpisz swoje imię</label>
-                                <input type="text" placeholder="wpisz swoje imię"/>
+        <>
+            <Container className="contact" id="contact">
+                <Row>
+                    <Col className="contactForm">
+                        <h3>Skontaktuj się z nami</h3>
+                        <img src={decoration} alt="decoration" />
+                        <form>
+                            <div className="contactName_Email">
+                                <div className="contactName">
+                                    <label>Wpisz swoje imię</label>
+                                    <input type="text" placeholder="wpisz swoje imię"/>
+                                </div>
+                                <div className="contactEmail">
+                                    <label>Wpisz swój email</label>
+                                    <input type="text" placeholder="wpisz swój email"/>
+                                </div>
+                            </div>
+                            <div className="contactTextArea">
+                                <label>Wpisz swoją wiadomość</label>
+                                <textarea placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." cols="30" rows="5"/>
                             </div>
                             <div>
-                                <label>Wpisz swój email</label>
-                                <input type="text" placeholder="wpisz swój email"/>
+                                <button>Wyślij</button>
                             </div>
-                        </div>
-                        <div>
-                            <label>Wpisz swoją wiadomość</label>
-                            <input type="textarea"/>
-                        </div>
-                        <div>
-                            <button>Wyślij</button>
-                        </div>
-                    </form>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    <p>Copyright by Coders Lab</p>
-                    <img src={facebookIcon} alt="facebook" />
-                    <img src={instagramIcon} alt="instagram" />
-                </Col>
-            </Row>
-        </Container>
+                        </form>
+                    </Col>
+                </Row>
+            </Container>
+            <Container>
+                <Row>
+                    <Col className="footer">
+                        <p>Copyright by Coders Lab</p>
+                        <img src={facebookIcon} alt="facebook" />
+                        <img src={instagramIcon} alt="instagram" />
+                    </Col>
+                </Row>
+            </Container>
+        </>
     );
 };
 
