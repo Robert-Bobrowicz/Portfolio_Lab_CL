@@ -1,6 +1,5 @@
 import React from 'react';
 import {Container, Row, Col} from "react-bootstrap";
-import backgroundContactForm from "../assets/Background-Contact-Form.jpg";
 import decoration from "../assets/Decoration.svg";
 import facebookIcon from "../assets/Facebook.svg";
 import instagramIcon from "../assets/Instagram.svg";
@@ -11,7 +10,7 @@ const HomeContact = () => {
             <Container className="contact" id="contact">
                 <Row>
                     <Col className="contactForm">
-                        <h3>Skontaktuj się z nami</h3>
+                        <h4>Skontaktuj się z nami</h4>
                         <img src={decoration} alt="decoration" />
                         <form>
                             <div className="contactName_Email">
@@ -28,7 +27,7 @@ const HomeContact = () => {
                                 <label>Wpisz swoją wiadomość</label>
                                 <textarea placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." cols="30" rows="5"/>
                             </div>
-                            <div>
+                            <div className="button">
                                 <button>Wyślij</button>
                             </div>
                         </form>
