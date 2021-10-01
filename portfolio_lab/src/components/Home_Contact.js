@@ -9,10 +9,7 @@ const HomeContact = () => {
     return (
         <Container className="contact" id="contact">
             <Row>
-                <Col>
-                    <img src={backgroundContactForm} alt="background" />
-                </Col>
-                <Col>
+                <Col className="contactForm">
                     <h3>Skontaktuj się z nami</h3>
                     <img src={decoration} alt="decoration" />
                     <form>
