@@ -1,6 +1,9 @@
 import React from 'react';
 import {Container, Row, Col} from "react-bootstrap";
 import decoration from "../assets/Decoration.svg";
+import {foundationsData} from "./data/foundationsDB";
+import {organisationsData} from "./data/organisationsDB";
+import {localEventsData} from "./data/localEventsDB";
 
 const HomeFoundations = () => {
     return (

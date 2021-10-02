@@ -1,7 +1,7 @@
 export const foundationsData = [
     {
         id: 1,
-        name: "Dbam o Zdrowie",
+        name: "Dbam o zdrowie",
         description: "Pomóc osobom znajdującym sie  w trudnej sytuacji życiowej.",
         whatWeCollect: "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
     },
@@ -19,13 +19,13 @@ export const foundationsData = [
     },
     {
         id: 4,
-        name: "Dbam o Życie",
+        name: "Dbam o życie",
         description: "Pomóc osobom znajdującym sie  w trudnej sytuacji życiowej.",
         whatWeCollect: "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
     },
     {
         id: 5,
-        name: "Zdążyć z Pomocą",
+        name: "Zdążyć z pomocą",
         description: "Pomóc rodzinom z niepełnosprawnymi dziećmi.",
         whatWeCollect: "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
     },
