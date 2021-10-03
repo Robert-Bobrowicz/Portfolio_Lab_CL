@@ -62,7 +62,7 @@ import React, { useState, useEffect } from 'react';
 import Posts from './test/Posts';
 import Pagination from './test/Pagination';
 import {foundationsData} from "./data/foundationsDB";
-// import axios from 'axios';
+// import axios from 'axios';  //npm install axios
 
 const Test = () => {
     const [posts, setPosts] = useState([]);
