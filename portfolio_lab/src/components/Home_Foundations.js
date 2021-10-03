@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Container, Row, Col} from "react-bootstrap";
 import decoration from "../assets/Decoration.svg";
 import {foundationsData} from "./data/foundationsDB";
 import {organisationsData} from "./data/organisationsDB";
 import {localEventsData} from "./data/localEventsDB";
+import Posts from "../components/Posts";
+import Pagination from "../components/Pagination";
 
 const HomeFoundations = () => {
 
@@ -18,6 +20,22 @@ const HomeFoundations = () => {
     const handleClickLocalEvents = () => {
         console.log("lokalne zbiórki rzeczy")
     }
+
+    const [posts, setPosts] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerPage] = useState(3);
+
+    useEffect(() => {
+        setPosts(foundationsData);
+    }, []);
+
+    // Get current posts
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+    // Change page
+    const paginate = pageNumber => setCurrentPage(pageNumber);
 
     return (
         <Container>
@@ -42,6 +60,12 @@ const HomeFoundations = () => {
                             </li>
                         ))}
                     </ul>
+                    <Posts posts={currentPosts} />
+                    <Pagination
+                        postsPerPage={postsPerPage}
+                        totalPosts={posts.length}
+                        paginate={paginate}
+                    />
                 </Col>
             </Row>
             <Row>
