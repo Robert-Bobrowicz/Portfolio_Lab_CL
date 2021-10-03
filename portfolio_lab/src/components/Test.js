@@ -66,18 +66,11 @@ import {foundationsData} from "./data/foundationsDB";
 
 const Test = () => {
     const [posts, setPosts] = useState([]);
-    const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage] = useState(3);
 
     useEffect(() => {
-        const fetchPosts = async () => {
-            setLoading(true);
-            setPosts(foundationsData);
-            setLoading(false);
-        };
-
-        fetchPosts();
+        setPosts(foundationsData);
     }, []);
 
     // Get current posts
@@ -91,7 +84,7 @@ const Test = () => {
     return (
         <div className='container mt-5'>
             <h1 className='text-primary mb-3'>My Blog</h1>
-            <Posts posts={currentPosts} loading={loading} />
+            <Posts posts={currentPosts} />
             <Pagination
                 postsPerPage={postsPerPage}
                 totalPosts={posts.length}
