@@ -1,58 +1,103 @@
-import React from 'react';
-import {Container, Row, Col} from "react-bootstrap";
+// import React from 'react';
+// import {Container, Row, Col} from "react-bootstrap";
+// import {foundationsData} from "./data/foundationsDB";
+// import {organisationsData} from "./data/organisationsDB";
+// import {localEventsData} from "./data/localEventsDB";
+//
+// const Test = () => {
+//     return (
+//             <Container fluid>
+//                 <Row>
+//                     <Col>1 of 4 {foundationsData[0].name}</Col>
+//                     <Col>2 of 4</Col>
+//                     <Col>1 of 1</Col>
+//                     <Col>1 of 1</Col>
+//                 </Row>
+//                 <Row>
+//                     <Col>1 of 4</Col>
+//                     <Col>2 of 4</Col>
+//                     <Col>1 of 1</Col>
+//                     <Col>1 of 1</Col>
+//                 </Row>
+//                 <Row>
+//                     <Col>
+//                         <ul className="list-group mb-4">
+//                             {foundationsData.map((el) => (
+//                                 <li key={el.id} className="list-group-item mb-2">
+//                                     {el.name}, {el.description}
+//                                 </li>
+//                             ))}
+//                         </ul>
+//                     </Col>
+//                 </Row>
+//                 <Row>
+//                     <Col>
+//                         <ul className="list-group mb-4">
+//                             {organisationsData.map((el) => (
+//                                 <li key={el.id} className="list-group-item mb-2">
+//                                     {el.name}, {el.description}
+//                                 </li>
+//                             ))}
+//                         </ul>
+//                     </Col>
+//                 </Row>
+//                 <Row>
+//                     <Col>
+//                         <ul className="list-group mb-4">
+//                             {localEventsData.map((el) => (
+//                                 <li key={el.id} className="list-group-item mb-2">
+//                                     {el.name}, {el.description}
+//                                 </li>
+//                             ))}
+//                         </ul>
+//                     </Col>
+//                 </Row>
+//             </Container>
+//     );
+// };
+//
+// export default Test;
+
+import React, { useState, useEffect } from 'react';
+import Posts from './test/Posts';
+import Pagination from './test/Pagination';
 import {foundationsData} from "./data/foundationsDB";
-import {organisationsData} from "./data/organisationsDB";
-import {localEventsData} from "./data/localEventsDB";
+// import axios from 'axios';
 
 const Test = () => {
+    const [posts, setPosts] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerPage] = useState(3);
+
+    useEffect(() => {
+        const fetchPosts = async () => {
+            setLoading(true);
+            setPosts(foundationsData);
+            setLoading(false);
+        };
+
+        fetchPosts();
+    }, []);
+
+    // Get current posts
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+    // Change page
+    const paginate = pageNumber => setCurrentPage(pageNumber);
+
     return (
-            <Container fluid>
-                <Row>
-                    <Col>1 of 4 {foundationsData[0].name}</Col>
-                    <Col>2 of 4</Col>
-                    <Col>1 of 1</Col>
-                    <Col>1 of 1</Col>
-                </Row>
-                <Row>
-                    <Col>1 of 4</Col>
-                    <Col>2 of 4</Col>
-                    <Col>1 of 1</Col>
-                    <Col>1 of 1</Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <ul className="list-group mb-4">
-                            {foundationsData.map((el) => (
-                                <li key={el.id} className="list-group-item mb-2">
-                                    {el.name}, {el.description}
-                                </li>
-                            ))}
-                        </ul>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <ul className="list-group mb-4">
-                            {organisationsData.map((el) => (
-                                <li key={el.id} className="list-group-item mb-2">
-                                    {el.name}, {el.description}
-                                </li>
-                            ))}
-                        </ul>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <ul className="list-group mb-4">
-                            {localEventsData.map((el) => (
-                                <li key={el.id} className="list-group-item mb-2">
-                                    {el.name}, {el.description}
-                                </li>
-                            ))}
-                        </ul>
-                    </Col>
-                </Row>
-            </Container>
+        <div className='container mt-5'>
+            <h1 className='text-primary mb-3'>My Blog</h1>
+            <Posts posts={currentPosts} loading={loading} />
+            <Pagination
+                postsPerPage={postsPerPage}
+                totalPosts={posts.length}
+                paginate={paginate}
+            />
+        </div>
     );
 };
 
