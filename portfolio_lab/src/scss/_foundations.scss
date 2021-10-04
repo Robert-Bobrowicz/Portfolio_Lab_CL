@@ -28,3 +28,50 @@
   text-align: center;
   margin-top: 3rem;
 }
+
+.listOfFoundations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $color5;
+}
+
+.listOfFoundations > p {
+  width: 50%;
+  padding: 2rem;
+  text-align: center;
+}
+
+.listOfFoundations > ul {
+  width: 100%;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nameOfFoundationAndDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-right: 2rem;
+}
+
+.nameOfFoundationAndDescription > div:nth-child(1) {
+  font-size: 1.2rem;
+}
+
+.nameOfFoundationAndDescription > div:nth-child(2) {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.whatWeCollectDetails {
+  font-size: 0.8rem;
+}

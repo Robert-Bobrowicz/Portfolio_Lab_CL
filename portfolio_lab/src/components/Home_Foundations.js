@@ -11,20 +11,21 @@ const HomeFoundations = () => {
     const [posts, setPosts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage] = useState(3);
+    const [description, setDescription] = useState('');
 
     const handleClickFoundations = () => {
-        console.log("fundacje które wspieramy");
         setPosts(foundationsData);
+        setDescription("W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.")
     }
 
     const handleClickOrganisations = () => {
-        console.log("organizacje charytatywne");
         setPosts(organisationsData);
+        setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
     }
 
     const handleClickLocalEvents = () => {
-        console.log("lokalne zbiórki rzeczy");
         setPosts(localEventsData);
+        setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
     }
 
     // Get current posts
@@ -49,8 +50,8 @@ const HomeFoundations = () => {
                 </Col>
             </Row>
             <Row>
-                <Col>
-                    <p>{posts.length}</p>
+                <Col className="listOfFoundations">
+                    <p>{description}</p>
                     <Posts posts={currentPosts} />
                     <Pagination
                         postsPerPage={postsPerPage}
