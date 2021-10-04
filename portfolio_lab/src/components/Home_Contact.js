@@ -5,6 +5,12 @@ import facebookIcon from "../assets/Facebook.svg";
 import instagramIcon from "../assets/Instagram.svg";
 
 const HomeContact = () => {
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("handle Submit button");
+    }
+
     return (
         <>
             <Container className="contact" id="contact">
@@ -28,7 +34,7 @@ const HomeContact = () => {
                                 <textarea placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." cols="30" rows="5"/>
                             </div>
                             <div className="button">
-                                <button>Wyślij</button>
+                                <button onClick={handleSubmit}>Wyślij</button>
                             </div>
                         </form>
                     </Col>
