@@ -53,6 +53,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 2px solid $color4;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.list-group-item:hover {
+  border-bottom: 2px solid $color4;
+  border-top: none;
+  border-right: none;
+  border-left: none;
 }
 
 .nameOfFoundationAndDescription {
