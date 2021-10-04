@@ -51,7 +51,7 @@ const HomeFoundations = () => {
             </Row>
             <Row>
                 <Col className="listOfFoundations">
-                    <p>{description}</p>
+                    <h5>{description}</h5>
                     <Posts posts={currentPosts} />
                     <Pagination
                         postsPerPage={postsPerPage}

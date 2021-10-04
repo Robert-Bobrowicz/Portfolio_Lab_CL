@@ -37,8 +37,9 @@
   color: $color5;
 }
 
-.listOfFoundations > p {
-  width: 50%;
+.listOfFoundations > h5 {
+  width: 55%;
+  margin-top: -2rem;
   padding: 2rem;
   text-align: center;
 }
@@ -85,4 +86,21 @@
 
 .whatWeCollectDetails {
   font-size: 0.8rem;
+}
+
+.page-item {
+  color: $color4;
+
+}
+
+.page-item:hover {
+  border: none;
+}
+
+.page-link {
+  color: $color4;
+}
+
+.page-link:hover {
+  border: 1px solid $color4;
 }
