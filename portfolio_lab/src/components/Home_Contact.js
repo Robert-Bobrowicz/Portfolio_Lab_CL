@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Container, Row, Col} from "react-bootstrap";
 import decoration from "../assets/Decoration.svg";
 import facebookIcon from "../assets/Facebook.svg";
@@ -51,7 +51,7 @@ const HomeContact = () => {
         //textarea validation
 
         console.log(message);
-        if (message.length <= 3) {
+        if (message.length <= 120) {
             console.log('message is not equal or longer than 120 characters');
             setErrorTextarea('Wiadomość musi mieć co najmniej 120 znaków');
         } else {
@@ -74,6 +74,35 @@ const HomeContact = () => {
         setEmail('');
         setMessage('');
     }
+
+    useEffect(() => {
+            const API = "https://fer-api.coderslab.pl/v1/portfolio/contact";
+
+            const data = {
+                name: name,
+                email: email,
+                message: message
+            };
+            if (submitSuccess !== '') {
+                fetch(`${API}`, {
+                    method: "POST",
+                    body: JSON.stringify(data),
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data);
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    });
+            }
+
+            document.title = `Portolio lab`;
+    },[name, email, message, submitSuccess]);
+
 
     return (
         <>
