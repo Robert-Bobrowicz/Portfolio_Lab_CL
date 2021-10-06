@@ -29,7 +29,7 @@ const HomeContact = () => {
         e.preventDefault();
 
         // Name validation
-        // setName(name);
+
         console.log(name);
         if (name.includes(' ') || name === "") {
             console.log('name is empty string or includes empty space');
@@ -39,7 +39,7 @@ const HomeContact = () => {
         }
 
         //email validation
-        // setEmail(email);
+
         console.log(email);
         if (!email.includes('@') || email === '') {
             console.log('email does not includes @ or is empty string');
@@ -49,7 +49,7 @@ const HomeContact = () => {
         }
 
         //textarea validation
-        // setMessage(message);
+
         console.log(message);
         if (message.length <= 3) {
             console.log('message is not equal or longer than 120 characters');
@@ -60,7 +60,7 @@ const HomeContact = () => {
 
         //success submit
 
-        console.log(errorName);
+        console.log(errorName); //dlaczego tu jest pusto nawet wtedy kiedy pojawiają się błędy ?
         console.log(errorEmail);
         console.log(errorTextarea);
         if ((name !== '' || !name.includes(' ')) && (email !== '' && email.includes('@')) && (message.length >= 3)) {
