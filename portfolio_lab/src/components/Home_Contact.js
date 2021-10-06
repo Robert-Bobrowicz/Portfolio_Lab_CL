@@ -15,35 +15,64 @@ const HomeContact = () => {
 
     const handleNameInput = (e) => {
         setName(e.target.value);
-        console.log(name);
-        if (name.includes(' ')) {
-            console.log('name is empty string or includes empty space');
-            setErrorName('Nieprawidłowe imię (powinno być bez spacji)');
-        }
     }
 
     const handleEmailInput = (e) => {
         setEmail(e.target.value);
-        if (!email.includes('@') || email.length === 0) {
-            console.log('email does not includes @ or is empty string');
-            setErrorEmail('Nieprawidłowy email');
-        }
     }
 
     const handleMessage = (e) => {
         setMessage(e.target.value);
-        if (message.length <= 120) {
-            console.log('message is not equal or longer than 120 characters');
-            setErrorTextarea('Wiadomość musi mieć co najmniej 120 znaków');
-        }
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (errorName.length === 0 && errorEmail.length === 0 && errorTextarea.length === 0)
-        {
-            setSubmitSuccess('Wiadomość została wysłana! Wkrótce się skontaktujemy.');
+
+        // Name validation
+        // setName(name);
+        console.log(name);
+        if (name.includes(' ') || name === "") {
+            console.log('name is empty string or includes empty space');
+            setErrorName('Nieprawidłowe imię (jeden wyraz bez spacji)');
+        } else {
+            setErrorName('')
         }
+
+        //email validation
+        // setEmail(email);
+        console.log(email);
+        if (!email.includes('@') || email === '') {
+            console.log('email does not includes @ or is empty string');
+            setErrorEmail('Nieprawidłowy email');
+        } else {
+            setErrorEmail('');
+        }
+
+        //textarea validation
+        // setMessage(message);
+        console.log(message);
+        if (message.length <= 3) {
+            console.log('message is not equal or longer than 120 characters');
+            setErrorTextarea('Wiadomość musi mieć co najmniej 120 znaków');
+        } else {
+            setErrorTextarea('');
+        }
+
+        //success submit
+
+        console.log(errorName);
+        console.log(errorEmail);
+        console.log(errorTextarea);
+        if ((name !== '' || !name.includes(' ')) && (email !== '' && email.includes('@')) && (message.length >= 3)) {
+            setSubmitSuccess('Wiadomość została wysłana! Wkrótce się skontaktujemy.')
+        }
+    }
+
+    const clearBox = (e) => {
+        e.target.value = '';
+        setName('');
+        setEmail('');
+        setMessage('');
     }
 
     return (
@@ -58,7 +87,7 @@ const HomeContact = () => {
                             <div className="contactName_Email">
                                 <div className="contactName">
                                     <label>Wpisz swoje imię</label>
-                                    <input onChange={handleNameInput} type="text" placeholder="wpisz swoje imię"/>
+                                    <input onChange={handleNameInput} onSubmit={clearBox} type="text" placeholder="wpisz swoje imię" name="inputName"/>
                                     <p className="nameError">{errorName}</p>
                                 </div>
                                 <div className="contactEmail">
