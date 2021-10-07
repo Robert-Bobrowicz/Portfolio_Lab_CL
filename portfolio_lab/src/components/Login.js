@@ -20,12 +20,15 @@ const Login = () => {
     }
 
     return (
+        <>
+            <Container>
+                <Row className="userLoginNav">
+                    <Col>
+                        <HomeNavigationHeader />
+                    </Col>
+                </Row>
+            </Container>
         <Container fluid className="userLogin">
-            <Row className="userLoginNav">
-                <Col>
-                    <HomeNavigationHeader />
-                </Col>
-            </Row>
             <Row>
                 <Col className="loginPanel">
                     <h3>Zaloguj się</h3>
@@ -49,6 +52,8 @@ const Login = () => {
                 </Col>
             </Row>
         </Container>
+        </>
+
     );
 };
 
