@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+ // height: 100vh;
 }
 
 .loginPanel {
@@ -17,6 +17,7 @@
 }
 
 .loginPanel > h3 {
+  margin-top: 1.2rem;
   margin-bottom: 1.2rem;
   color: $color5;
 }

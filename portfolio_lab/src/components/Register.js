@@ -20,39 +20,44 @@ const Register = () => {
     }
 
     return (
-        <Container fluid className="userLogin">
-            <Row className="userLoginNav">
-                <Col>
-                    <HomeNavigationHeader />
-                </Col>
-            </Row>
-            <Row>
-                <Col className="loginPanel">
-                    <h3>Zaloguj się</h3>
-                    <img src={decoration} alt="decoration" />
-                    <form className="loginForm">
-                        <div>
-                            <div className="loginEmail">
-                                <label className="mb-2">Email</label>
-                                <input type="email" className="mb-2" onChange={handleEmail}/>
+        <>
+            <Container>
+                <Row className="userLoginNav">
+                    <Col>
+                        <HomeNavigationHeader />
+                    </Col>
+                </Row>
+            </Container>
+            <Container fluid className="userLogin">
+
+                <Row>
+                    <Col className="loginPanel">
+                        <h3>Zaloguj się</h3>
+                        <img src={decoration} alt="decoration" />
+                        <form className="loginForm">
+                            <div>
+                                <div className="loginEmail">
+                                    <label className="mb-2">Email</label>
+                                    <input type="email" className="mb-2" onChange={handleEmail}/>
+                                </div>
+                                <div className="loginPassword">
+                                    <label className="mb-2">Hasło</label>
+                                    <input type="password" className="mb-2" onChange={handlePassword}/>
+                                </div>
+                                <div className="loginPassword">
+                                    <label className="mb-2">Powtórz hasło</label>
+                                    <input type="password" className="mb-2" onChange={handlePassword}/>
+                                </div>
                             </div>
-                            <div className="loginPassword">
-                                <label className="mb-2">Hasło</label>
-                                <input type="password" className="mb-2" onChange={handlePassword}/>
+                            <div className="loginButtons">
+                                <button className="btn mx-2">Załóż konto</button>
+                                <button type="submit" className="btn submit mx-2" onSubmit={handleSubmit}>Zaloguj się</button>
                             </div>
-                            <div className="loginPassword">
-                                <label className="mb-2">Powtórz hasło</label>
-                                <input type="password" className="mb-2" onChange={handlePassword}/>
-                            </div>
-                        </div>
-                        <div className="loginButtons">
-                            <button className="btn mx-2">Załóż konto</button>
-                            <button type="submit" className="btn submit mx-2" onSubmit={handleSubmit}>Zaloguj się</button>
-                        </div>
-                    </form>
-                </Col>
-            </Row>
-        </Container>
+                        </form>
+                    </Col>
+                </Row>
+            </Container>
+        </>
     );
 };
 
