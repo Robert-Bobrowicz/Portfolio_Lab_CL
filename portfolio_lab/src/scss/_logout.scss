@@ -1,0 +1,18 @@
+@import "./settings/colors";
+
+
+.userLogout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.logoutButton {
+  border: 2px solid transparent;
+}
+
+.logoutButton:hover {
+  border: 2px solid $color4;
+}
