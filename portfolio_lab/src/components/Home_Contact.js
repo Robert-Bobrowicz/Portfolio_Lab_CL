@@ -29,7 +29,6 @@ const HomeContact = () => {
         e.preventDefault();
 
         // Name validation
-
         console.log(name);
         if (name.includes(' ') || name === "") {
             console.log('name is empty string or includes empty space');
@@ -39,7 +38,6 @@ const HomeContact = () => {
         }
 
         //email validation
-
         console.log(email);
         if (!email.includes('@') || email === '') {
             console.log('email does not includes @ or is empty string');
@@ -49,7 +47,6 @@ const HomeContact = () => {
         }
 
         //textarea validation
-
         console.log(message);
         if (message.length <= 120) {
             console.log('message is not equal or longer than 120 characters');
@@ -59,7 +56,6 @@ const HomeContact = () => {
         }
 
         //success submit
-
         console.log(errorName); //dlaczego tu jest pusto nawet wtedy kiedy pojawiają się błędy ?
         console.log(errorEmail);
         console.log(errorTextarea);
@@ -75,6 +71,7 @@ const HomeContact = () => {
         setMessage('');
     }
 
+    //API POST zapis danych do BD
     useEffect(() => {
             const API = "https://fer-api.coderslab.pl/v1/portfolio/contact";
 
