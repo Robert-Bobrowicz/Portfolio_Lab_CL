@@ -100,7 +100,6 @@ const HomeContact = () => {
             document.title = `Portolio lab`;
     },[name, email, message, submitSuccess]);
 
-
     return (
         <>
             <Container className="contact" id="contact">
