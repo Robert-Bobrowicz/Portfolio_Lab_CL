@@ -12,24 +12,27 @@ const Login = () => {
 
     const handleEmail = (e) => {
         setEmail(e.target.value);
+    }
+
+    const handlePassword = (e) => {
+        setPassword(e.target.value);
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
         if (!email.includes('@')) {
             setHasEmailError(true);
         } else {
             setHasEmailError(false);
         }
-    }
-
-    const handlePassword = (e) => {
-        setPassword(e.target.value);
         if (password.length < 6) {
             setHasPasswordError(true);
         } else {
             setHasPasswordError(false);
         }
-    }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+        setEmail('');
+        setPassword('');  //dlaczego nie czyści inputa?
     }
 
     return (
@@ -46,7 +49,7 @@ const Login = () => {
                     <Col className="loginPanel">
                         <h3>Zaloguj się</h3>
                         <img src={decoration} alt="decoration" />
-                        <form className="loginForm">
+                        <form className="loginForm" onSubmit={handleSubmit}>
                         <div>
                             <div className="loginEmail">
                                 <label className="mb-2">Email</label>

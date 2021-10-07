@@ -108,7 +108,7 @@ const HomeContact = () => {
                         <h4>Skontaktuj się z nami</h4>
                         <img src={decoration} alt="decoration" />
                         <p className="submitSuccess">{submitSuccess}</p>
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <div className="contactName_Email">
                                 <div className="contactName">
                                     <label>Wpisz swoje imię</label>
