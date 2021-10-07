@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Container, Row, Col} from "react-bootstrap";
 import decoration from "../assets/Decoration.svg";
+import HomeNavigationHeader from "./Home_Navigation_Header";
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -20,6 +21,11 @@ const Login = () => {
 
     return (
         <Container fluid className="userLogin">
+            <Row className="userLoginNav">
+                <Col>
+                    <HomeNavigationHeader />
+                </Col>
+            </Row>
             <Row>
                 <Col className="loginPanel">
                     <h3>Zaloguj się</h3>
