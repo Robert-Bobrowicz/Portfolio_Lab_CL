@@ -28,12 +28,12 @@ const Login = () => {
                     </Col>
                 </Row>
             </Container>
-        <Container fluid className="userLogin">
-            <Row>
-                <Col className="loginPanel">
-                    <h3>Zaloguj się</h3>
-                    <img src={decoration} alt="decoration" />
-                    <form className="loginForm">
+            <Container fluid className="userLogin">
+                <Row>
+                    <Col className="loginPanel">
+                        <h3>Zaloguj się</h3>
+                        <img src={decoration} alt="decoration" />
+                        <form className="loginForm">
                         <div>
                             <div className="loginEmail">
                                 <label className="mb-2">Email</label>
@@ -48,10 +48,10 @@ const Login = () => {
                             <button className="btn mx-2">Załóż konto</button>
                             <button type="submit" className="btn submit mx-2" onSubmit={handleSubmit}>Zaloguj się</button>
                         </div>
-                    </form>
-                </Col>
-            </Row>
-        </Container>
+                        </form>
+                    </Col>
+                </Row>
+            </Container>
         </>
 
     );
