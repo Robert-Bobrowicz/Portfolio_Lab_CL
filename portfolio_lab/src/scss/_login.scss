@@ -52,6 +52,10 @@
   background-color: transparent;
 }
 
+.loginEmail > p, .loginPassword > p {
+  color: red;
+}
+
 .loginButtons {
   width: 150%;
   display: flex;

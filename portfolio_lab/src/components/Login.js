@@ -6,13 +6,26 @@ import HomeNavigationHeader from "./Home_Navigation_Header";
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [hasEmailError, setHasEmailError] = useState(false);
+    const [hasPasswordError, setHasPasswordError] = useState(false);
+
 
     const handleEmail = (e) => {
         setEmail(e.target.value);
+        if (!email.includes('@')) {
+            setHasEmailError(true);
+        } else {
+            setHasEmailError(false);
+        }
     }
 
     const handlePassword = (e) => {
         setPassword(e.target.value);
+        if (password.length < 6) {
+            setHasPasswordError(true);
+        } else {
+            setHasPasswordError(false);
+        }
     }
 
     const handleSubmit = (e) => {
@@ -38,10 +51,12 @@ const Login = () => {
                             <div className="loginEmail">
                                 <label className="mb-2">Email</label>
                                 <input type="email" className="mb-2" onChange={handleEmail}/>
+                                {hasEmailError && <p>Podano nieprawidłowy email</p>}
                             </div>
                             <div className="loginPassword">
                                 <label className="mb-2">Password</label>
                                 <input type="password" className="mb-2" onChange={handlePassword}/>
+                                {hasPasswordError && <p>Podane hasło jest za krótkie</p>}
                             </div>
                         </div>
                         <div className="loginButtons">
