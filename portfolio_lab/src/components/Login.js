@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Container, Row, Col} from "react-bootstrap";
 import decoration from "../assets/Decoration.svg";
 import HomeNavigationHeader from "./Home_Navigation_Header";
@@ -8,7 +8,6 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [hasEmailError, setHasEmailError] = useState(false);
     const [hasPasswordError, setHasPasswordError] = useState(false);
-
 
     const handleEmail = (e) => {
         setEmail(e.target.value);
@@ -53,7 +52,7 @@ const Login = () => {
                         <div>
                             <div className="loginEmail">
                                 <label className="mb-2">Email</label>
-                                <input type="email" className="mb-2" onChange={handleEmail}/>
+                                <input type="email" className="mb-2" onChange={handleEmail} value={email}/>
                                 {hasEmailError && <p>Podano nieprawidłowy email</p>}
                             </div>
                             <div className="loginPassword">
@@ -64,7 +63,7 @@ const Login = () => {
                         </div>
                         <div className="loginButtons">
                             <button className="btn mx-2">Załóż konto</button>
-                            <button type="submit" className="btn submit mx-2" onSubmit={handleSubmit}>Zaloguj się</button>
+                            <button type="submit" className="btn submit mx-2">Zaloguj się</button>
                         </div>
                         </form>
                     </Col>

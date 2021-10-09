@@ -61,11 +61,11 @@ const HomeContact = () => {
         console.log(errorTextarea);
         if ((name !== '' || !name.includes(' ')) && (email !== '' && email.includes('@')) && (message.length >= 3)) {
             setSubmitSuccess('Wiadomość została wysłana! Wkrótce się skontaktujemy.')
+            clearBox();
         }
     }
 
-    const clearBox = (e) => {
-        e.target.value = '';
+    const clearBox = () => {
         setName('');
         setEmail('');
         setMessage('');
@@ -112,18 +112,33 @@ const HomeContact = () => {
                             <div className="contactName_Email">
                                 <div className="contactName">
                                     <label>Wpisz swoje imię</label>
-                                    <input onChange={handleNameInput} onSubmit={clearBox} type="text" placeholder="wpisz swoje imię" name="inputName"/>
+                                    <input
+                                        onChange={handleNameInput}
+                                        type="text"
+                                        placeholder="wpisz swoje imię"
+                                        value={name}/>
                                     <p className="nameError">{errorName}</p>
                                 </div>
                                 <div className="contactEmail">
                                     <label>Wpisz swój email</label>
-                                    <input onChange={handleEmailInput} type="email" placeholder="wpisz swój email"/>
+                                    <input
+                                        onChange={handleEmailInput}
+                                        type="text"
+                                        placeholder="wpisz swój email"
+                                        value={email}/>
                                     <p className="emailError">{errorEmail}</p>
                                 </div>
                             </div>
                             <div className="contactTextArea">
                                 <label>Wpisz swoją wiadomość</label>
-                                <textarea onChange={handleMessage} placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." cols="30" rows="5"/>
+                                <textarea
+                                    onChange={handleMessage}
+                                    value={message}
+                                    placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                                    cols="30"
+                                    rows="5"
+                                />
+
                                 <p className="textAreaError">{errorTextarea}</p>
                             </div>
                             <div className="button">
