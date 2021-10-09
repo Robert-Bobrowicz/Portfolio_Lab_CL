@@ -96,7 +96,7 @@ const Register = () => {
                                 <div className="loginPasswordRepeat">
                                     <label className="mb-2">Powtórz hasło</label>
                                     <input
-                                        type="password"
+                                        type="text"
                                         className="mb-2"
                                         onChange={handlePasswordRepeat}
                                         value={passwordRepeat}/>
