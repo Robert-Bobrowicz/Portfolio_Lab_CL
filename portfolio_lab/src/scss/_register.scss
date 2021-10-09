@@ -31,7 +31,7 @@
   padding: 1rem;
 }
 
-.loginEmail, .loginPassword {
+.loginEmail, .loginPassword, .loginPasswordRepeat {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.2rem;
@@ -41,12 +41,13 @@
   font-weight: bold;
 }
 
-.loginEmail > input, .loginPassword > input {
+.loginEmail > input, .loginPassword > input, .loginPasswordRepeat > input {
   border-top: none;
   border-right: none;
   border-left: none;
   border-bottom: 2px solid $color4;
   background-color: transparent;
+  margin-bottom: 0;
 }
 
 .loginButtons {
@@ -54,7 +55,7 @@
   display: flex;
   justify-content: space-between;
   transform: translateX(-18%);
-  margin-top: 3rem;
+  margin-top: 0.7rem;
 }
 
 .loginButtons button {
