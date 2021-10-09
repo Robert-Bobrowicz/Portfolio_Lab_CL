@@ -62,7 +62,7 @@ const HomeContact = () => {
         if ((name !== '' || !name.includes(' ')) && (email !== '' && email.includes('@')) && (message.length >= 3)) {
             setSubmitSuccess('Wiadomość została wysłana! Wkrótce się skontaktujemy.')
             clearBox();
-        }
+        } else { setSubmitSuccess('')}
     }
 
     const clearBox = () => {

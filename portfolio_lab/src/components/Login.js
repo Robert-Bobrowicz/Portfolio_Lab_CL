@@ -30,8 +30,14 @@ const Login = () => {
             setHasPasswordError(false);
         }
 
+        if (hasEmailError === false && hasPasswordError === false) {
+            clearBox();
+        }
+    }
+
+    const clearBox = () => {
         setEmail('');
-        setPassword('');  //dlaczego nie czyści inputa?
+        setPassword('');
     }
 
     return (
@@ -52,12 +58,20 @@ const Login = () => {
                         <div>
                             <div className="loginEmail">
                                 <label className="mb-2">Email</label>
-                                <input type="email" className="mb-2" onChange={handleEmail} value={email}/>
+                                <input
+                                    type="text"
+                                    className="mb-2"
+                                    onChange={handleEmail}
+                                    value={email}/>
                                 {hasEmailError && <p>Podano nieprawidłowy email</p>}
                             </div>
                             <div className="loginPassword">
                                 <label className="mb-2">Password</label>
-                                <input type="password" className="mb-2" onChange={handlePassword}/>
+                                <input
+                                    type="password"
+                                    className="mb-2"
+                                    onChange={handlePassword}
+                                    value={password}/>
                                 {hasPasswordError && <p>Podane hasło jest za krótkie</p>}
                             </div>
                         </div>
