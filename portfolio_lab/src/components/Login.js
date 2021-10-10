@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Container, Row, Col} from "react-bootstrap";
+import {Link} from 'react-router-dom';
 import decoration from "../assets/Decoration.svg";
 import HomeNavigationHeader from "./Home_Navigation_Header";
 
@@ -76,7 +77,7 @@ const Login = () => {
                             </div>
                         </div>
                         <div className="loginButtons">
-                            <button className="btn mx-2">Załóż konto</button>
+                            <Link to="/register" className="btn mx-2">Załóż konto</Link>
                             <button type="submit" className="btn submit mx-2">Zaloguj się</button>
                         </div>
                         </form>

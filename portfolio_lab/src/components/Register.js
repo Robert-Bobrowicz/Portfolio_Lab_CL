@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Container, Row, Col} from "react-bootstrap";
+import {Link} from 'react-router-dom';
 import decoration from "../assets/Decoration.svg";
 import HomeNavigationHeader from "./Home_Navigation_Header";
 
@@ -70,7 +71,7 @@ const Register = () => {
             <Container fluid className="userLogin">
                 <Row>
                     <Col className="loginPanel">
-                        <h3>Zaloguj się</h3>
+                        <h3>Załóż konto</h3>
                         <img src={decoration} alt="decoration" />
                         <form className="loginForm" onSubmit={handleSubmit}>
                             <div className="mb-2">
@@ -104,7 +105,7 @@ const Register = () => {
                             </div>
                             <div className="loginButtons">
                                 <button className="btn mx-2">Załóż konto</button>
-                                <button type="submit" className="btn mx-2">Zaloguj się</button>
+                                <Link to = "/login" className="btn mx-2">Zaloguj się</Link>
                             </div>
                         </form>
                     </Col>
