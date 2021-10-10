@@ -41,13 +41,17 @@
   font-weight: bold;
 }
 
-.loginEmail > input, .loginPassword > input, .loginPasswordRepeat > input {
+.loginPasswordRepeat > input {
   border-top: none;
   border-right: none;
   border-left: none;
   border-bottom: 2px solid $color4;
   background-color: transparent;
   margin-bottom: 0;
+}
+
+.loginPasswordRepeat > p {
+  color: red;
 }
 
 .loginButtons {

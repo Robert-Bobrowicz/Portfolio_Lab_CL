@@ -68,13 +68,12 @@ const Register = () => {
                 </Row>
             </Container>
             <Container fluid className="userLogin">
-
                 <Row>
                     <Col className="loginPanel">
                         <h3>Zaloguj się</h3>
                         <img src={decoration} alt="decoration" />
                         <form className="loginForm" onSubmit={handleSubmit}>
-                            <div>
+                            <div className="mb-2">
                                 <div className="loginEmail">
                                     <label className="mb-2">Email</label>
                                     <input
