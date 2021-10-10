@@ -99,7 +99,8 @@ const Register = () => {
                                         type="password"
                                         className="mb-2"
                                         onChange={handlePasswordRepeat}
-                                        value={passwordRepeat}/>
+                                        value={passwordRepeat}
+                                    />
                                     <p>{passwordRepeatError}</p>
                                 </div>
                             </div>
