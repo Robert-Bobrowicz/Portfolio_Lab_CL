@@ -62,10 +62,11 @@
   margin-top: 0.7rem;
 }
 
-.loginButtons button {
+.loginButtons button, .loginButtons .btn {
   border: 2px solid transparent;
 }
 
-.loginButtons button:hover {
+.loginButtons button:hover, .btn:hover {
   border: 2px solid $color4;
+  border-radius: 0;
 }
