@@ -21,7 +21,7 @@ const Register = () => {
     }
 
     const handlePasswordRepeat = (e) => {
-        setPassword(e.target.value);
+        setPasswordRepeat(e.target.value);
     }
 
     const handleSubmit = (e) => {
